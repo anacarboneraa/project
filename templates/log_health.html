@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Log Health{% endblock %}
+
+{% block content %}
+    <h1>Log Your Health Data</h1>
+    <form method="POST">
+        <label for="workout">Did you exercise today?</label>
+        <select name="workout">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <p></p>
+        <label for="healthy_meals">Healthy Meals:</label>
+        <input type="number" name="healthy_meals" min="0">
+        <p></p>
+        <label for="total_meals">Total Meals:</label>
+        <input type="number" name="total_meals" min="1" required>
+        <p></p>
+        <label for="water intake">Water Intake (Glasses):</label>
+        <input type="number" name="water_intake" min="0">
+        <p></p>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
